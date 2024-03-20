@@ -1,0 +1,238 @@
+:root{
+  --color-gray-strong: #5B5B5B;
+  --color-gray-md: #969696;
+  --color-gray-light: #BBBBBB;
+}
+.strong-gray{
+  color: var(--color-gray-strong);
+}
+.md-gray{
+  color: var(--color-gray-md);
+}
+.light-gray{
+  color: var(--color-gray-light);
+}
+.lekton-bold {
+  font-family: "Lekton", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lekton-regular-italic {
+  font-family: "Lekton", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.font-logo {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+
+}
+
+@keyframes dissapear-appear {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.logo-container .logo {
+  display: inline-block;
+  animation: dissapear-appear  2s linear forwards;
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+body {
+  font-family: "Lekton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+display:flex;
+flex-direction: column;
+ /*min-height: 100vh;*/
+}
+main{
+   
+    flex-grow: 1;
+}
+.current-menu-item a {
+  text-decoration: underline;
+}
+header{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+footer{
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+  margin-top:12px;
+}
+/*index*/
+.card-body{
+  position: relative;
+  margin-bottom:16px;
+}
+.bg-filter{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); 
+  width: 100%;
+  height:100%;
+   
+}
+.card-img {
+  width: 100vw;
+  height: 20vh;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(20%);
+  z-index: -1;
+}
+
+.card-title {
+  color: white;
+  position:absolute;
+  z-index: 1;
+  bottom:24px;
+  right:24px;
+  font-size: 18px;
+  font-weight: bold;
+  
+  padding:8px;
+}
+.card-p {
+  color: white;
+  position:absolute;
+  z-index: 1;
+  bottom:-8px;
+  right:24px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.prev-next-links > a {
+  color:black !important;
+  text-decoration: none !important;
+  font-size: 12px;
+}
+.prev-next-links > a:hover{
+  font-weight: bold !important;
+}
+@media(min-width:400px){
+  .font-logo {
+    font-size:40px;
+  }
+  .card-title{
+    font-size: 24px;
+  }
+  .card-p {
+    font-size: 16px;
+  }
+}
+@media(min-width:980px){
+  .font-logo {
+    font-size:48px;
+  }
+  .card-title{
+    font-size: 30px;
+  }
+  .card-p {
+    font-size: 18px;
+  }
+}
+
+
+
+
+.single-post-arrow{
+ 
+ padding: 0 12px;
+ z-index: 2;
+  font-weight: normal;
+  font-size:60px;
+  cursor: pointer;
+}
+
+/*biografias*/
+
+
+.card-title-post-container{
+  position:absolute; z-index: 1;
+ inset: 0; color: white;
+ min-width:100%;
+}
+
+.bio-excerpt{
+  font-size: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+
+
+}
+.bio-title{
+  color:black;
+  text-decoration: none;
+}
+
+
+@media(min-width:400px){
+  .card-title-post {
+    font-size: 32px;
+  }
+}
+.logo-container-footer{
+  scale:0.5;
+
+}
+#footer-date{
+  color: var(--color-gray-md);
+  font-size: 12px;
+
+
+}
+.card-title-poesias, .card-title-post{
+  width:100%;
+  text-align: center;
+  color: white;
+  position:absolute;
+  z-index: 1;
+ top:50%;
+ right:50%;
+ transform:translate(50%, -50%);
+  font-size: 32px;
+  font-weight: bolder;
+
+}
+.tag-author-poesias{
+  font-size:12px;
+}
+.excerpt-poesias{
+  
+  color: var(--color-gray-light);
+}
+@media(min-width:576px){
+  .card-title-poesias{
+    font-size: 24px;
+  }
+  .card-title-post{
+    font-size:48px;
+  }
+}
+@media(min-width:990px){
+  .card-title-post{
+    font-size:56px;
+  }
+
+}
+.img-caption{
+  color: var(--color-gray-md);
+  font-size: 12px;
+}
