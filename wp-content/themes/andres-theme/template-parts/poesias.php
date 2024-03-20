@@ -34,7 +34,7 @@
 
             <div class="col-sm-6 col-md-4 col-xs-12 mt-5">
                
-                <?php get_template_part("template/content", "poesias-cards"); ?>
+                <?php get_template_part("template-parts/content", "poesias-cards"); ?>
 
                 <p class="text-end tag-author-poesias"><?php the_tags(""); ?></p>
 

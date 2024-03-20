@@ -33,7 +33,7 @@
     <div class="row">
         <div class="col-xs-12 ">
         <div class="card-body <?php echo $animationClass ?>">
-        <?php get_template_part("template/content", "imagenes") ?>
+        <?php get_template_part("template-parts/content", "imagenes") ?>
         </div>
           
 

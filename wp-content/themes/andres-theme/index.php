@@ -23,7 +23,7 @@
              
              ?>
              <div class="card-body <?php echo $animationClass ?>">
-              <?php get_template_part("template/content"); ?>
+              <?php get_template_part("template-parts/content"); ?>
         </div> 
              
 

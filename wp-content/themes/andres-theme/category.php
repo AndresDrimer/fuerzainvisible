@@ -5,11 +5,11 @@ if (is_category()) {
 
     // Personaliza la página según el slug de la categoría
     if ($category_slug == 'poesias') { 
-        get_template_part("template/poesias");
+        get_template_part("template-parts/poesias");
     } elseif ($category_slug == 'biografias') { 
-        get_template_part("template/biografias");
+        get_template_part("template-parts/biografias");
     } elseif ($category_slug == 'imagenes') { 
-        get_template_part("template/imagenes");
+        get_template_part("template-parts/imagenes");
     }
 }
 ?>
