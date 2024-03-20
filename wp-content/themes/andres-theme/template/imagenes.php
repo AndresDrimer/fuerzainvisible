@@ -2,7 +2,7 @@
 
     get_header(); ?>
 
-<main>
+<main class="mt-5">
 <?php
         
         $category_slug = 'imagenes'; 
@@ -19,14 +19,22 @@
             //'posts_per_page' => 10, 
         );
         $query = new WP_Query($args);
+       
+        $postCount = 0;
+
 
         if( $query->have_posts() ):
-            while( $query->have_posts() ): $query->the_post(); 
-    ?>
+            while( $query->have_posts() ): $query->the_post(); $postCount++;
+            $animationClass = ( $postCount % 2 === 0 ) ? "coming-animation-left" : "coming-animation-right";
+             
+             ?>
+             
+  
     <div class="row">
-        <div class="col-xs-12">
-
-        <?php get_template_part("template/content", "poesias-cards") ?>
+        <div class="col-xs-12 ">
+        <div class="card-body <?php echo $animationClass ?>">
+        <?php get_template_part("template/content", "imagenes") ?>
+        </div>
           
 
       

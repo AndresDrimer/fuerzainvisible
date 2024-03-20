@@ -1,6 +1,6 @@
-<!--manage content for index--> 
 
 
+<div class="card-body">
     <a href="<?php echo esc_url(get_permalink()); ?>">
   
 <?php
@@ -34,3 +34,4 @@ echo '<h5 class="card-title">' . get_the_title(). '</h5>';
   <div class="bg-filter"></div>
 </a>
 
+</div>

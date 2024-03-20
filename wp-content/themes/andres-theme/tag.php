@@ -21,12 +21,14 @@
                 'tag' => $tag_slug, // 
             );
             
-            $query = new WP_Query($args);}
+            $query = new WP_Query($args);}?>
 
-        if ( $query->have_posts() ) :
+<h1><?php echo convertSlugToName($tag_slug) ?></h1>
+
+      <?php if ( $query->have_posts() ) :
             while ( $query->have_posts() ) : $query->the_post();
               
-              get_template_part("template/content") ?>
+              get_template_part("template/content-single") ?>
 
         <?php
             endwhile;

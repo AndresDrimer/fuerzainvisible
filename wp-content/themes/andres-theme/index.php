@@ -13,12 +13,19 @@
         $args = array('posts_per_page'=>3, 'paged'=> $currentPage);
         query_posts($args); 
 
+        $postCount = 0;
 
 
         if ( have_posts() ) :
             while ( have_posts() ) : the_post();
-              
-              get_template_part("template/content") ?>
+            $postCount++;
+            $animationClass = ( $postCount % 2 === 0 ) ? "coming-animation-left" : "coming-animation-right";
+             
+             ?>
+             <div class="card-body <?php echo $animationClass ?>">
+              <?php get_template_part("template/content"); ?>
+        </div> 
+             
 
         <?php
             endwhile;

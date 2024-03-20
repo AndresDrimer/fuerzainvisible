@@ -107,6 +107,8 @@ function crear_menu_programaticamente() {
     // Nombre del menú
     $nombre_menu = 'Menú Principal';
 
+  
+    
     // Verifica si el menú ya existe
     if (!wp_get_nav_menu_object($nombre_menu)) {
         // Crea el menú
@@ -230,4 +232,10 @@ add_filter('wp_insert_post_data', function ($data, $postarr) {
     return $data;
 }, 10, 2);
 
+/*
+    ==============================
+    includes helper functions on lib folder
+    ===============================
+*/
+require_once locate_template('lib/helpers.php');
 
